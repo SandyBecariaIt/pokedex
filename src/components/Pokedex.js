@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
-import Card from './ui/Card'
+import CardComponent from './ui/Card';
+import SearchComponent from './ui/Search';
 
 class Pokedex extends Component {
   render () {
     return (
       <div className="container">
-        <Card />
+        <SearchComponent />
+
+        <div className='card-container'>
+          <CardComponent />
+          <CardComponent />
+        </div>
       </div>
     );
   }

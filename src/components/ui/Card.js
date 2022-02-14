@@ -1,5 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
+import './../../styles/global-style.css';
 
-class CardComponent extends Component {
-  
+const CardComponent = () => {
+  return (
+    <div className='card'>
+      Hola
+    </div>
+  );
 }
+
+export default CardComponent
