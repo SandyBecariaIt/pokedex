@@ -1,8 +1,47 @@
 .card {
+  display: block;
+  cursor: pointer;
   padding: 0.5rem 1rem;
-  margin: 0.7rem 0.7rem 0.7rem 0;
+  margin: 0.7rem 0.9rem 0.7rem 0;
   border: 1px solid #767575;
   border-radius: 15px;
   background-color: #ffffff;
   box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.005) translateZ(0);
+  box-shadow: 0 24px 36px rgba(0,0,0,0.11),
+    0 24px 46px var(--box-shadow-color);
+}
+
+.card .img-card {
+  width: 15rem;
+  height: auto;
+  background-color: #F2F2F2;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 15px;
+}
+
+.card .title-card {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #767575;
+}
+
+.card .footer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card .footer .item-power {
+  margin: 2%;
+  padding: 0.2rem 0.4rem;
+  border-radius: 10px;
+  border: 1px solid #B97FC9;
+  background-color: #B97FC9;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
 }

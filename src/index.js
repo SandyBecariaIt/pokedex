@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Pokedex from './components/Pokedex'
+import { AppRouter } from './routes/AppRouter';
 
 import './styles/global-style.css';
 
 ReactDOM.render(
-  <Pokedex />,
+  <AppRouter />,
   document.getElementById('root')
 );

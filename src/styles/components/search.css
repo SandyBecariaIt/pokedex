@@ -1,0 +1,19 @@
+.search {
+  margin: 3% 0 4%;
+  padding: 0.3rem 0.2rem 0.3rem 0.4rem;
+  border-radius: 20px;
+  border: 1px solid;
+  display: flex;
+}
+
+.search .input-search {
+  outline: none;
+  border: none;
+  width: 90%;
+}
+
+.search .img {
+  width: 20px;
+  height: auto;
+  margin: 0.2rem;
+}
