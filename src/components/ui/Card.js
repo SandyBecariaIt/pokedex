@@ -1,7 +1,7 @@
 import React from 'react';
 import './../../styles/global-style.css';
 
-const CardComponent = ({ name, url, powers }) => {
+const CardComponent = ({ name, url, powers, loader }) => {
   return (
     <div className='card'>
       <img
@@ -18,7 +18,7 @@ const CardComponent = ({ name, url, powers }) => {
                 key={index}
                 className='item-power'
               >
-                { power.name }
+                { power.slot }
               </div>
             )
           })

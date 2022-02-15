@@ -1,7 +1,8 @@
-const url = process.env.VUE_APP_PRINCIPAL_URL
+const url = 'https://pokeapi.co/api/v2'
 
 export function buildRequest(uri, method) {
   return new Request(`${url}${uri}`, {
-    method: method
+    method: method,
+    redirect: 'follow'
   })
 }

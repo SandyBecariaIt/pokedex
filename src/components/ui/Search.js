@@ -1,12 +1,13 @@
 import React from 'react';
 import './../../styles/global-style.css';
 
-const SearchComponent = ({placeholder }) => {
+const SearchComponent = ({ hdlChange }) => {
   return (
     <div className='search'>
       <input
         className='input-search'
-        placeholder='Busca por nombre o por poder'
+        placeholder='Busca un pokemon'
+        onChange={hdlChange}
       />
       <img
         className='img'

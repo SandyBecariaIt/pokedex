@@ -1,8 +1,31 @@
-import React from 'react';
-import { Link } from "react-router-dom";
+import React, { useEffect } from 'react';
+import { Link, useParams } from "react-router-dom";
 import './../styles/global-style.css'
+import { usePokemons } from './../hooks/usePokemos'
 
 const Details = () => {
+  const {
+    ability,
+    detail,
+    setDetail,
+    getByName,
+    getAbility
+  } = usePokemons()
+  const params = useParams();
+
+  useEffect(() => {
+    getById()
+  }, [])
+
+  const getById = async () => {
+    const result = await getByName(params.idPokemon)
+    getAbility(params.idPokemon)
+    
+    if (result) {
+      setDetail(result)
+    }
+  }
+
   return (
     <div className='container'>
       <div className='content-return'>
@@ -16,29 +39,33 @@ const Details = () => {
 
       <div className='style-detail'>
         <div className='img-style'>
-          <img className='img' src='https://pokemonletsgo.pokemon.com/assets/img/common/char-eevee.png' />
+          <img className='img' src={detail.sprites?.front_shiny || ''} />
         </div>
 
         <div className='info-style'>
-          <p className='text-info'>Este Pokémon nace con una semilla en el lomo, que brota con el paso del tiempo.</p>
-        
           <div className='backgroung-blue'>
             <div className='div-information'>
               <div className='information-pokedex'>
-                <p className='title-info'>Altura</p>
-                <span className='text-info'>0.7m</span>
+                <p className='title-info'>Nombre</p>
+                <span className='text-info'>
+                  {detail.name}
+                </span>
               </div>
 
               <div className='information-pokedex'>
-                <p className='title-info'>Categoria</p>
-                <span className='text-info'>Semilla</span>
+                <p className='title-info'>Generación</p>
+                <span className='text-info'>
+                  { ability?.generation ? ability?.generation.name : '' }
+                </span>
               </div>
             </div>
 
             <div className='div-information'>
               <div className='information-pokedex'>
-                <p className='title-info'>Peso</p>
-                <span className='text-info'>6.9 kg</span>
+                <p className='title-info'>Grupo</p>
+                <span className='text-info'>
+                  { ability.effect_changes && ability.effect_changes.version_group ? ability?.effect_changes[0].version_group?.name : '' }
+                </span>
               </div>
 
               <div className='information-pokedex'>
@@ -52,16 +79,14 @@ const Details = () => {
                 <p className='title-info'>Habilidad</p>
                 <span className='text-info'>Espesura</span>
               </div>
-
-              <div className='information-pokedex'>
-                <p className='title-info'>Sexo</p>
-                <span className='text-info'>
-                  kuhb
-                </span>
-              </div>
             </div>
           </div>
+        </div>
 
+        <div
+          className='text-info'
+        >
+          {ability?.effect_entries ? ability?.effect_entries[0]?.effect : ''}
         </div>
       </div>
     </div>

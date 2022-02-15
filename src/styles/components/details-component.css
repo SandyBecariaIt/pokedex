@@ -10,11 +10,8 @@
 }
 
 .container .style-detail .img-style {
-  width: 15rem;
   height: auto;
   background-color: #F2F2F2;
-  padding: 0 10px;
-  margin: 0;
   border-radius: 15px;
 }
 
@@ -25,7 +22,6 @@
 
 .container .style-detail .info-style {
   margin: 0 10%;
-  width: 50%;
 }
 
 .container .style-detail .info-style .div-information {
@@ -34,15 +30,30 @@
   justify-content: space-between;
 }
 
-.container .style-detail .info-style .text-info {
+.text-info {
+  margin: 2rem 0;
   font-size: 1.3rem;
   font-weight: 500;
+  width: 100%;
+  text-align: justify;
 }
 
 .backgroung-blue {
   padding: 1% 5% 3%;
-  width: 50%;
+  width: 15rem;
   border-radius: 20px;
   background-color: #30A7D7;
   border: 1px solid #30A7D7;
+}
+
+@media (max-width: 640px) {
+  .container .style-detail .img-style {
+    display: block;
+    margin: auto;
+    margin: 1rem auto;
+  }
+  .container .style-detail .info-style {
+    display: block;
+    margin: auto;
+  }
 }
