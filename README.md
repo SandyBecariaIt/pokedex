@@ -1,3 +1,7 @@
+## Se logro hasta el buscador por nombre y ID y un listado de lospokemon, al dar clic en un card, se puede ver el detalle del pokemon
+
+## Lo que no se logro, fue generar la vista para agregar a favoritos.
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -42,7 +46,3 @@ Detalle
 ![image](https://user-images.githubusercontent.com/30103350/154170205-fc50e1b4-32fd-437d-a116-c4533b5ea1a9.png)
 
 ![image](https://user-images.githubusercontent.com/30103350/154170245-6658470c-422a-4afe-8412-4676af49e8a9.png)
-
-Se logro hasta el buscador por nombre y ID y un listado de lospokemon, al dar clic en un card, se puede ver el detalle del pokemon
-
-Lo que no se logro, fue generar la vista para agregar a favoritos.
