@@ -2,6 +2,9 @@
 
 ## Lo que no se logro, fue generar la vista para agregar a favoritos.
 
+Para generar las peticiones se utilizo fetch <br />
+Para generar los estilos se utilizo CSS puro
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -30,8 +33,6 @@ Se utilizo el api de poke api
 
 Vease documentación en https://pokeapi.co/docs/v2
 
-Para generar las peticiones se utilizo fetch
-Para generar los estilos se utilizo CSS puro
 
 Vistas
 
